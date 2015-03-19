@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="sportsApp">
+  <head>
+    <title>ESPN</title>
+    <link href="index.css" rel="stylesheet"/>
+  </head>
+  <body>
+
+    <script src="libs/angular.js"></script>
+    <script src="index.js"></script>
+
+    <div class="content">
+      <div class="topics" ng-controller="TopicsController">
+        <div ng-repeat="item in data">
+        {{item.text}}
+        </div>
+      </div>
+
+      <div class="carousel" ng-controller="CarouselController">
+        <div class="big">
+          <img src="{{data[0].big.background}}"/>
+          <div class="big-footer">
+            <div class="big-footer-title">{{data[0].big.title}}</div>
+            <div class="big-footer-text">{{data[0].big.text}}</div>
+            <div class="big-footer-links" ng-repeat="link in data[0].big.links">
+              <a href="{{link.url}}">{{link.text}}</a>
+            </div>
+
+            <div class="big-footer-credit">{{data[0].big.credit}}</div>
+
+          </div>
+        </div>
+      </div>
+
+     
+      
+    </div>
+    
+  </body>
+</html>
