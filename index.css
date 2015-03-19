@@ -52,6 +52,28 @@ body {
 	font-size: 14px;
 }
 
+.carousel-subheaders {
+	display: inline-block;
+	width: 9%;
+  	padding-left: 67px;
+  	padding-top: 9px;
+}
+
+.carousel-subheaders:first-child {
+	padding-left: 0px;
+}
+
+.carousel-subheaders-wrap {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.carousel-subheaders-wrap:first-child {
+	padding-left: 0px;
+}
+
+
+
 .content {
 	width: 68%;
 	margin-right: auto;
@@ -65,6 +87,36 @@ body {
 	font-size: 14px;
 	vertical-align: top;
 }
+
+.subheader {
+	display: inline-block;
+	position: relative;
+
+}
+
+.subheader-title {
+	display: inline-block;
+	position: absolute;
+	bottom: 0px;
+	color: white;
+	background-color: black;
+	font-family: verdana,arial,sans-serif;
+  	font-size: 10px;
+  	font-weight: 400;
+  	line-height: 10px;
+  	bottom: 2px;
+  	width: 100%;
+}
+
+.subheader-subtitle {
+	display: inline-block;
+	position: absolute;
+	bottom: 0px;
+	color: white;
+	background-color: black;
+	width: 100%;
+}
+
 
 .topics {
 	background-color: rgb(230, 230, 230);
