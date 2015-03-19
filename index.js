@@ -4,7 +4,6 @@ sportsApp.controller("CarouselController", [ "$scope", "getData", function($scop
 
   getData("http://tiy-espn-info.herokuapp.com/espn/carousel", function(data){
 
-  	console.log(data);
     $scope.data = data
 
   });
@@ -21,15 +20,31 @@ sportsApp.controller("TopicsController", [ "$scope", "getData", function($scope,
 
 }]);
 
-/*sportsApp.controller("HighlightsController", [ "$scope", "getData", function($scope, getData){
+sportsApp.controller("HighlightsController", [ "$scope", "getData", function($scope, getData){
 
-  getData("http://tiy-espn-info.herokuapp.com/espn/highlights", function(data){
+  getData("http://tiy-espn-info.herokuapp.com/espn/headlines", function(data){
 
+  	console.log(data);
     $scope.data = data
+
+    _.each($scope.data, function(element, index) {
+    	if (element.glyph) {
+    		if (element.glyph === "video") {
+    			element.glyph = "http://assets.espn.go.com/icons/watch_headlines.png"
+    		}
+    		if (element.glyph === "insider") {
+    			element.glyph = "http://a.espncdn.com/icons/in.gif"
+    		}
+    		if (element.glyph === "live") {
+    			element.glyph = "http://assets.espn.go.com/i/ls.gif"
+    		}
+    	}
+    });
+
 
   });
 
-}]);*/
+}]);
 
 sportsApp.factory("getData", [ "$http", function($http){
 
