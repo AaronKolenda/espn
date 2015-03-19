@@ -12,14 +12,15 @@
 
     <div class="content">
       <div class="topics" ng-controller="TopicsController">
-        <div ng-repeat="item in data">
+        <img src="http://a2.espncdn.com/i/sctrends/logo-sc-trends2.png"/>
+        <div ng-repeat="item in data" class="topic-item">
         {{item.text}}
         </div>
       </div>
 
       <div class="carousel" ng-controller="CarouselController">
         <div class="big">
-          <img src="{{data[0].big.background}}"/>
+          <img class="big-image" src="{{data[0].big.background}}"/>
           <div class="big-footer">
             <div class="big-footer-title">{{data[0].big.title}}</div>
             <div class="big-footer-text">{{data[0].big.text}}</div>

@@ -1,0 +1,55 @@
+.big-image {
+	width: 100%;
+}
+
+body {
+	font-size: 0px;
+	margin: 0px;
+	padding: 0px;
+	background: url(http://a2.espncdn.com/prod/assets/bg_generic_rust.jpg);
+
+}
+
+.carousel {
+	display: inline-block;
+	width: 64%;
+	font-size: 14px;
+}
+
+.content {
+	width: 68%;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: white;
+}
+
+.highlights {
+	display: inline-block;
+	width: 35%;
+	font-size: 14px;
+	vertical-align: top;
+}
+
+.topics {
+	background-color: rgb(230, 230, 230);
+}
+
+.topic-item {
+	display: inline-block;
+	font-size: 13px;
+	line-height: 8px;
+	position: relative;
+  	bottom: 12px;
+  	font-family: Helvetica, sans-serif;
+  	font-weight: bold;
+  	font-style: italic;
+  	color: #333;
+  	padding-left: 25px;
+  	padding-right: 25px;
+  	border-right: 1px solid grey;
+}	
+
+.topic-item:last-child {
+	border-right: none;
+}
+
