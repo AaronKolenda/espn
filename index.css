@@ -1,5 +1,41 @@
+.big {
+	font-size: 0px;
+}
+
 .big-image {
 	width: 100%;
+}
+
+.big-footer {
+	height: 100px;
+	background-color: black;
+	color: white;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	position: relative;
+	box-sizing: border-box;
+	padding: 15px;
+}
+
+.big-footer-credit {
+	position: absolute;
+	top: 5px;
+	right: 11px;
+	color: #ababab;
+	font-size: 9px;
+}
+
+.big-footer-title {
+	font-size: 30px;
+	margin-bottom: 5px;
+}
+
+.big-footer-links {
+	display: inline-block;
+}
+
+.big-footer-text {
+	display: inline-block;
 }
 
 body {
