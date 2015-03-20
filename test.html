@@ -13,9 +13,11 @@
     <div class="content">
       <div class="topics" ng-controller="TopicsController">
         <img src="http://a2.espncdn.com/i/sctrends/logo-sc-trends2.png"/>
-        <div ng-repeat="item in data" class="topic-item">
-        {{item.text}}
-        </div>
+        <a href="#">
+          <div ng-repeat="item in data" class="topic-item">
+          {{item.text}}
+          </div>
+        </a>
       </div>
 
       <div class="carousel" ng-controller="CarouselController">
@@ -56,7 +58,7 @@
       <div class="highlights" ng-controller="HighlightsController">
         <ul>
           <li ng-repeat="item in data">
-            <a href="{{item.url}}">{{item.text}}</a><img src="{{item.glyph}}"/>
+            <a href="{{item.url}}">{{item.text}}</a><img src="{{item.glyph}}" class="glyph"/>
             <a href="{{item.analysis.url}}" ng-class="{analysis: item.border === true}">{{item.analysis.text}}</a>
           </li>
         </ul>
