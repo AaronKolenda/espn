@@ -8,6 +8,18 @@ sportsApp.controller("CarouselController", [ "$scope", "getData", function($scop
 
   });
 
+  $scope.hover = false;
+
+  $scope.startHover = function(e) {
+    $scope.hover = true;
+    angular.element(e.srcElement).css("bottom", "12px");
+  }
+
+  $scope.stopHover = function(e) {
+    $scope.hover = false;
+    angular.element(e.srcElement).css("bottom", "2px");
+  }
+
 }]);
 
 sportsApp.controller("TopicsController", [ "$scope", "getData", function($scope, getData){
@@ -39,10 +51,24 @@ sportsApp.controller("HighlightsController", [ "$scope", "getData", function($sc
     			element.glyph = "http://assets.espn.go.com/i/ls.gif"
     		}
     	}
+      
     });
+
+      _.each($scope.data, function(element, index) {
+        element.border = false;
+        if (element.analysis) {
+          if (element.analysis.text.replace(/ /g,'') !== "") {
+            element.border = true;
+          }
+        }
+      });
+      console.log($scope.data);
 
 
   });
+
+
+
 
 }]);
 

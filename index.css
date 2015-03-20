@@ -1,3 +1,7 @@
+.analysis {
+	border-left: 1px solid lightgrey;
+}
+
 .big {
 	font-size: 0px;
 }
@@ -74,8 +78,6 @@ body {
 	padding-left: 0px;
 }
 
-
-
 .content {
 	width: 68%;
 	margin-right: auto;
@@ -86,14 +88,40 @@ body {
 .highlights {
 	display: inline-block;
 	width: 35%;
-	font-size: 14px;
+	font-size: 12px;
 	vertical-align: top;
+	font-family: verdana, sans-serif;
+}
+
+.highlights a {
+	color: black;
+	text-decoration: none;
+}
+
+.highlights a:hover {
+	color: blue;
+	text-decoration: underline;
+}
+
+.highlights a:visited {
+	color: #888;
+	text-decoration: none;
+}
+
+li {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+li:first-child {
+	padding-top: 0px;
 }
 
 .subheader {
 	display: inline-block;
 	position: relative;
 	width: 100%;
+	box-sizing: border-box;
 }
 
 .subheader img {
@@ -103,11 +131,10 @@ body {
 .subheader-title {
 	display: inline-block;
 	position: absolute;
-	bottom: 0px;
 	color: white;
 	background-color: black;
-	font-family: verdana,arial,sans-serif;
-  	font-size: 10px;
+	font-size: 10px;
+	font-family: verdana, sans-serif;
   	font-weight: 400;
   	line-height: 10px;
   	bottom: 2px;
@@ -115,11 +142,15 @@ body {
 }
 
 .subheader-subtitle {
+	font-family: verdana, sans-serif;
+	font-weight: 400;
+	font-size: 10px;
 	display: inline-block;
 	position: absolute;
-	bottom: 0px;
+	bottom: 2px;
 	color: white;
 	background-color: black;
+	line-height: 10px;
 	width: 100%;
 }
 
@@ -145,5 +176,9 @@ body {
 
 .topic-item:last-child {
 	border-right: none;
+}
+
+ul {
+	padding-left: 30px;
 }
 
