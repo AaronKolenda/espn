@@ -12,7 +12,7 @@
 
     <div class="content">
       <div class="topics" ng-controller="TopicsController">
-        <img src="http://a2.espncdn.com/i/sctrends/logo-sc-trends2.png"/>
+        <img src="http://a2.espncdn.com/i/sctrends/logo-sc-trends2.png"/ class="topic-image">
         <a href="#">
           <div ng-repeat="item in data" class="topic-item">
           {{item.text}}
@@ -22,15 +22,16 @@
 
       <div class="carousel" ng-controller="CarouselController">
         <div class="big">
-          <img class="big-image" src="{{data[0].big.background}}"/>
+          <img class="big-image" src="{{data[index].big.background}}"/>
           <div class="big-footer">
-            <div class="big-footer-title">{{data[0].big.title}}</div>
-            <div class="big-footer-text">{{data[0].big.text}}</div>
-            <div class="big-footer-links" ng-repeat="link in data[0].big.links">
+            <div class="big-footer-title">{{data[index].big.title}}</div>
+            <div class="big-footer-text">{{data[index].big.text}}</div>
+            <div class="big-footer-links" ng-repeat="link in data[index].big.links">
               <a href="{{link.url}}">{{link.text}}</a>
+              <img class="" src="{{link.glyph}}"/>
             </div>
 
-            <div class="big-footer-credit">{{data[0].big.credit}}</div>
+            <div class="big-footer-credit">{{data[index].big.credit}}</div>
 
           </div>
         </div>
@@ -38,14 +39,17 @@
         <div class="carousel-subheaders-wrap">
           <div class="carousel-subheaders" ng-repeat="item in data">
             <div class="subheader">
-              <img src="{{item.small.background}}" ng-mouseover="startHover($event)" ng-mouseleave="stopHover($event)"/>
+              <div class="image-wrap">
+                <img src="{{item.small.background}}" ng-mouseover="startHover(item)" ng-mouseleave="stopHover(item)" ng-click="showBig($index)" class="subheader-image"/>
+                <img src="playicon.png" class="play" ng-click="showBig($index)"/>
+              </div>
               <a href="#">
-                <div class="subheader-title" ng-mouseover="startHover($event)" ng-mouseleave="stopHover($event)">
+                <div class="subheader-title" ng-mouseover="startHover(item)" ng-mouseleave="stopHover(item)">
                 {{item.small.title}}
                 </div>
               </a>
               <a href="#">
-                <div class="subheader-subtitle" ng-show="hover" ng-mouseover="startHover($event)">
+                <div class="subheader-subtitle" ng-mouseover="startHover(item)">
                   {{item.small.subtitle}}
                 </div>
               </a>
@@ -63,8 +67,6 @@
           </li>
         </ul>
       </div>
-
-     
       
     </div>
     
